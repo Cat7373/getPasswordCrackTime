@@ -85,8 +85,8 @@ function getPasswordCrackTime() {
      * @param calcs 要设置的数值，默认值为400000000
      */
     publicMethods.setCalcs = function(calcs) {
-        if (!c) {
-            c = 1;
+        if (!calcs) {
+            calcs = 1;
         }
 
         values.calcs = calcs;
@@ -109,8 +109,8 @@ function getPasswordCrackTime() {
      * @return 爆破该密码所需的时间
      */
     publicMethods.getPasswordCrackTime = function(password) {
-    	publicMethods.setPassword(password);
-    	return publicMethods.getValue('time');
+        publicMethods.setPassword(password);
+        return publicMethods.getValue('time');
     }
 
     return publicMethods;
